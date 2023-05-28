@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css links -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- javascript links -->
+    <script src="./assets/js/script.js" defer></script>
+    <title>todo App</title>
+</head>
+<body>
+    <header class="display_header" id="header">
+        <form id="form">
+            <div>
+                <input type="text" class="task_input" name="" id="dateInput" placeholder="date...." required>
+            </div>
+            <div class="flex_display measure">
+                <div>
+                    <input class="header_input" type="text" name="" id="todoInput" placeholder="what to do...." required>
+                </div>
+                <div>
+                    <input class="header_input" type="text" name="" id="nameInput" placeholder="enter your name...." required>
+                </div>
+            </div>
+            <div class="flex_display measure">
+                <div>
+                    <input class="header_input" type="text" name="" id="addressInput" placeholder="enter your address...." required>
+                </div>
+                <div>
+                    <input class="header_input" type="text" name="" id="cardInput" placeholder="put your card name...." required>
+                </div>
+            </div>
+            <div>
+                <input type="text" class="task_input" name="" id="taskInput" placeholder="put your task here...." required>
+            </div>
+            <button class="btn" data-type="addBtn" id="addTaskBtn">add Task</button>
+            <button class="btn" data-type="updateBtn" id="updateTaskBtn">update Task</button>
+            <input type="hidden" id="newId" value="" />
+        </form>
+    </header>
+    <main>
+        <!-- start of section1 -->
+        <div class="section1 padding">
+            <div class="section1_container flex_display position alignment">
+                <h1 class="flex_display alignment"><span><img class="blue_hamburger" src="./assets/icons/blue hamburger.svg" alt="blue hamburger"></span>Task Center</h1>
+                <button class="btn" id="firstBtn" data-type="headerBtn">New Task</button>
+            </div>
+            <div class="section1_card flex_display flex-wrap">
+                <div>
+                    <h2>My Task</h2>
+                    <div class="card flex_display ">
+                        <div class="task padding">
+                            <h3>0</h3>
+                            <h3>OPEN TASK</h3>
+                        </div>
+                        <div class="overdue padding">
+                            <h3 id="overDue"></h3>
+                            <h3>OVERDUE</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Team Task</h2>
+                    <div class="card flex_display">
+                        <div class="task padding">
+                            <h3>0</h3>
+                            <h3>OPEN TASK</h3>
+                        </div>
+                        <div class="overdue padding">
+                            <h3>0</h3>
+                            <h3>OVERDUE</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of section1 -->
+
+        <!-- start of section2 -->
+        <div class="section2 flex_display flex-wrap padding position">
+            <div>
+                <input type="search" name="filterInput" id="searchData" placeholder="Filter by subject & notes">
+                <button id="filterBtn">filter</button>
+                <button id="clearBtn">clear filter /</button>
+                <button id="viewBtn" data-type="viewAllBtn">view All</button>
+            </div>
+            <div class="icons flex_display alignment">
+                <p class="plus_icon">+</p>
+                <img class="detail_img" src="./assets/icons/file.svg" alt="files">
+                <img class="detail_img" src="./assets/icons/setting.svg" alt="setting">
+            </div>
+        </div>
+        <!-- end of section2 -->
+        <p class="note">OVERDUE</p>
+        <!-- start of inner container -->
+        <div class="section3 padding" id="displayData"></div>
+    </main>
+</body>
+</html>
